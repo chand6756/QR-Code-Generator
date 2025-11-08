@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background: #ffffff3a;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #222;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  transition: height 0.3s ease;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #7d5fff;
+  box-shadow: 0 0 8px rgba(125, 95, 255, 0.3);
+}
+
+.form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: #7d5fff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+  background: #5b3cf3;
+  transform: scale(1.03);
+}
+
+.qr-code {
+  opacity: 0;
+  margin-top: 25px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper.active .qr-code {
+  opacity: 1;
+}
+
+.qr-code img {
+  width: 180px;
+  height: 180px;
+}
+
+.download-btn {
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #44e14e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #2ec737;
+  transform: scale(1.05);
+}
+
+.wrapper.active .download-btn {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  .form input, .form button {
+    font-size: 15px;
+  }
+  .qr-code img {
+    width: 160px;
+    height: 160px;
+  }
+}
