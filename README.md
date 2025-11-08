@@ -70,4 +70,4 @@ Run index.html in your browser — that’s it!
 
 💻 Demo
 
-👉 Live Demo Link
+👉 Live Demo Link: https://chand6756.github.io/QR-Code-Generator/
